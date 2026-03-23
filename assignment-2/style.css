@@ -9,7 +9,7 @@
 
 /* Keep page neutral so images dominate */
 body {
-  background: #000000;
+  background: darkgray;
   padding: 20px;
 }
 
@@ -37,7 +37,7 @@ body {
 
 /* Subtle hover effect */
 .gallery-item:hover img {
-    border : 2px gray;
+    border : 2px white;
     opacity: 1.0;
     transform: scale(1.03);
 
