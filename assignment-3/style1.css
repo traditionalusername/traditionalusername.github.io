@@ -1,0 +1,98 @@
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Hide slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Images */
+.mySlides img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Caption text */
+.text {
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0 0 8px 8px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Navigation arrows */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+}
+
+/* Position arrows */
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Arrow hover effect */
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Dots */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+/* Active dot */
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fade animation */
+.fade {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4 }
+  to { opacity: 1 }
+}
