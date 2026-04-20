@@ -5,6 +5,13 @@ let images = [
     "img/img4.jpg"
 ];
 
+let names = [
+      "Name_1",
+      "Name_2",
+      "Name_3",
+      "Name_4"
+];
+
 let slideIndex = 1;
 
 document.addEventListener("DOMContentLoaded", () => {
