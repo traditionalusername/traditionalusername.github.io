@@ -6,7 +6,7 @@ let images = [
 ];
 
 let names = [
-      "Name_1",traditionalusername/cloudflare
+      "Name_1",
       "Name_2",
       "Name_3",
       "Name_4"
