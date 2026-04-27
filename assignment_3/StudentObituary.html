@@ -2,19 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Student Obituaries</title>
   <link rel="stylesheet" href="style1.css">
 </head>
 <body>
 
-<!-- Slideshow container -->
-<div class="slideshow-container" id="slideshow-container">
-  <!-- Slides will be injected by JS -->
+<main class="page">
+  <header class="top">
+    <h1>The Chapel</h1>
+    <p>Remember and Reflect</p>
+  </header>
 
-  <!-- Navigation buttons -->
-  <button class="prev" type="button" aria-label="Previous slide" onclick="plusSlides(-1)">&#10094;</button>
-  <button class="next" type="button" aria-label="Next slide" onclick="plusSlides(1)">&#10095;</button>
-</div>
+  <div class="content">
+    <!-- Slideshow container -->
+    <section aria-label="Student slideshow" class="slideshow-container" id="slideshow-container">
+      <!-- Slides will be injected by JS -->
+
+      <!-- Navigation buttons -->
+      <button class="prev" type="button" aria-label="Previous slide" onclick="plusSlides(-1)">&#10094;</button>
+      <button class="next" type="button" aria-label="Next slide" onclick="plusSlides(1)">&#10095;</button>
+    </section>
+
+    <section aria-labelledby="thoughts-title" class="thoughts-panel">
+      <h2 id="thoughts-title">Name_1</h2>
+
+      <form class="write" id="thought-form">
+        <textarea id="thought-input" aria-label="Share a thought" placeholder="Share your thoughts"></textarea>
+        <button type="submit">Post</button>
+      </form>
+
+      <div class="list">
+        <p class="title" id="list-title">Recently Shared.</p>
+        <div aria-live="polite" id="entry-list"></div>
+      </div>
+    </section>
+  </div>
+</main>
 
 <!-- External JS -->
 <script src="myScript.js"></script>
