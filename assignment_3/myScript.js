@@ -6,7 +6,7 @@ let images = [
 ];
 
 let names = [
-      "Name_1",
+      "Name_1",traditionalusername/cloudflare
       "Name_2",
       "Name_3",
       "Name_4"
@@ -48,7 +48,6 @@ function showSlides(n) {
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-
   // Show current slide
   slides[slideIndex - 1].style.display = "block";
 }
