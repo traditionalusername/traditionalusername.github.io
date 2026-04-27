@@ -12,11 +12,11 @@ let names = [
       "Name_4"
 ];
 
-let slideIndex = 1;
+let slideIndex = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
   createSlides();
-  showSlides(slideIndex);
+  showSlides(0);
 });
 
 function createSlides() {
@@ -26,7 +26,7 @@ function createSlides() {
     const slide = document.createElement("div");
     slide.className = "mySlides fade";
     slide.innerHTML = `
-      <img src="${src}" style="width:100%" alt="">
+      <img src="${src}" alt="" draggable="false">
       <div class="text">Caption ${index + 1}</div>
     `;
 
@@ -35,19 +35,21 @@ function createSlides() {
 }
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+  showSlides(slideIndex + n);
 }
 
 function showSlides(n) {
   const slides = document.getElementsByClassName("mySlides");
+  const totalSlides = slides.length;
 
-  if (n > slides.length) slideIndex = 1;
-  if (n < 1) slideIndex = slides.length;
+  if (!totalSlides) return;
+  slideIndex = ((n % totalSlides) + totalSlides) % totalSlides;
 
   // Hide all slides
-  for (let i = 0; i < slides.length; i++) {
+  for (let i = 0; i < totalSlides; i++) {
     slides[i].style.display = "none";
   }
+
   // Show current slide
-  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex].style.display = "block";
 }
