@@ -9,7 +9,7 @@ let images = [
 
 let names = [
       "Jefferson Voelker ’28",
-      "Maria Bowling",
+      "Maria Bowling 'GS",
       "Kerry Grundlingh ’27",
       "Lauren Blackburn ’26",
       "James Li '27",
