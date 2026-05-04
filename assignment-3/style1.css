@@ -13,6 +13,7 @@ body {
 }
 
 .top {
+  position: relative;
   text-align: center;
   margin-bottom: 16px;
 }
@@ -26,6 +27,76 @@ body {
   margin-top: 6px;
   color: #666;
   font-size: 14px;
+}
+
+.info-button {
+  background: #6d6456;
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  height: 28px;
+  line-height: 28px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 28px;
+}
+
+.info-button:hover {
+  background: #575046;
+}
+
+.info-modal {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.35);
+  display: none;
+  inset: 0;
+  justify-content: center;
+  padding: 16px;
+  position: fixed;
+  z-index: 100;
+}
+
+.info-modal.open {
+  display: flex;
+}
+
+.info-card {
+  background: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  max-width: 560px;
+  padding: 18px 18px 14px;
+  position: relative;
+  width: 100%;
+}
+
+.info-card h2 {
+  margin: 0 28px 10px 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.info-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.info-close {
+  background: transparent;
+  border: 0;
+  color: #555;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  padding: 0;
+  position: absolute;
+  right: 12px;
+  top: 10px;
 }
 
 .content {
@@ -49,14 +120,15 @@ body {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
+  height: 68vh;
 }
 
 /* Images */
 .mySlides img {
   display: block;
   width: 100%;
-  max-height: 68vh;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
 }
 
@@ -161,6 +233,41 @@ textarea::placeholder {
   border-left: 3px solid #6d6456;
   margin-bottom: 10px;
   padding: 10px;
+}
+
+.entry-text {
+  margin: 0 0 8px 0;
+  white-space: pre-wrap;
+}
+
+.entry-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.entry-actions button {
+  background: #6d6456;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 10px;
+}
+
+.entry-actions button:hover {
+  background: #575046;
+}
+
+.entry-edit {
+  border: 1px solid #c9c2b4;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 14px;
+  margin-bottom: 8px;
+  min-height: 70px;
+  padding: 8px;
+  resize: vertical;
+  width: 100%;
 }
 
 .empty {
